@@ -39,10 +39,10 @@
             
             <div class="form-group">
                 <label class="col-sm-3 control-label">Name</label>
-                <div class="col-sm-3">
+                <div class="col-sm-4">
                     <asp:TextBox ID="txtName" runat="server" CssClass="form-control"></asp:TextBox>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-sm-5">
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtName" 
                         Display="Dynamic" ErrorMessage="Required" CssClass="text-danger"></asp:RequiredFieldValidator>
                 </div>  
@@ -50,10 +50,10 @@
             
             <div class="form-group">
                 <label class="col-sm-3 control-label">Email address</label>
-                <div class="col-sm-3">
+                <div class="col-sm-4">
                     <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control"></asp:TextBox>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-sm-5">
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtEmail" 
                         Display="Dynamic" ErrorMessage="Required" CssClass="text-danger"></asp:RequiredFieldValidator>
                 </div>  
@@ -62,14 +62,18 @@
             <%-- Quotation and Return buttons --%>
             <div class="form-group">
                 <div class="col-sm-offset-3 col-sm-9">
-                    <%-- buttons go here --%>
+                    <asp:Button ID="btnSend" runat="server" Text="Send Quotation"
+                         CssClass="btn btn-primary" OnClick="btnSend_Click" />
+                    <asp:Button ID="btnReturn" runat="server" Text="Return"
+                         CssClass="btn btn-primary" PostBackUrl="~/Default.aspx" CausesValidation="false" />
                 </div>
             </div> 
             
             <%-- message label --%>
             <div class="form-group">
                 <div class="col-sm-offset-1 col-sm-11">
-                    <%-- message label goes here --%>
+                    <asp:Label ID="lblMessage" runat="server" CssClass="text-info" 
+                        Text="Click the Send Quotation button to send the quotation via email."></asp:Label>
                 </div>
             </div>
 

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="XEx04Quotation.Default" %>
+﻿412669<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="XEx04Quotation.Default" %>
 
 <!DOCTYPE html>
 
@@ -61,14 +61,16 @@
                 <div class="col-sm-offset-3 col-sm-9">
                     <asp:Button ID="btnCalculate" runat="server" Text="Calculate"
                          CssClass="btn btn-primary" OnClick="btnCalculate_Click" />
-                    <%-- confirm button goes here --%>
+                    <asp:Button ID="btnConfirm" runat="server" Text="Confirm"
+                         CssClass="btn btn-primary" OnClick="btnConfirm_Click" />
                 </div>
-            </div> 
+            </div>  
             
             <%-- message label --%>
             <div class="form-group">
                 <div class="col-sm-offset-1 col-sm-11">
-                    <%-- message label goes here --%>
+                    <asp:Label ID="lblMessage" runat="server" CssClass="text-info" 
+                        Text="Enter price and discount amount and click Calculate."></asp:Label>
                 </div>
             </div>   
 
